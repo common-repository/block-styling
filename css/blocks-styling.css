@@ -1,0 +1,57 @@
+:where(.wp-admin) *{scrollbar-width: thin;scrollbar-gutter: stable both-edges;}
+@supports (font-smooth){[data-title]:not([data-title=""]):before{font-smooth:always}}
+@media (min-width: 769px){
+.editor-styles-wrapper .is-root-container>.wp-block[data-align=full] {margin-inline: 4cqmin !important;}
+.editor-styles-wrapper .wp-block-columns>.wp-block-column>.wp-block{width:-webkit-fill-available!important}
+}
+
+.wp-block{position:relative}
+.wp-block::before {box-shadow:inset 0 0 0 100vmax rgb(0 0 0 / 2%), 0 0 0.6px rgb(128 128 128 / 50%);width: 100%;height: 100%;content: '';position: absolute;inset: 0;background: transparent;z-index:1;pointer-events:none}
+    
+
+.wp-block-group[role=group]>*{border:.5px solid #000!important}
+.wp-block-widget-area__inner-blocks.block-editor-inner-blocks.editor-styles-wrapper {background-color: var(--wp--preset--color--neutral)}
+.editor-styles-wrapper .wp-block-columns>.wp-block-column>.wp-block{border:.5px dashed rgb(0 0 0/40%)!important}
+:is(.editor-styles-wrapper .wp-block-columns >.wp-block-column >.wp-block-html,iframe.components-sandbox){width:fit-content;min-width:10vw;max-height:35vh;overflow-y:scroll;border:.3px dashed grey!important;color:#000}
+:is(.block-library-html__edit .block-editor-plain-text,iframe.components-sandbox)::-webkit-scrollbar{width:5px}
+:is(.block-library-html__edit .block-editor-plain-text,iframe.components-sandbox)::-webkit-scrollbar-track{background:rgb(0 0 0/5%)}
+:is(.block-library-html__edit .block-editor-plain-text,iframe.components-sandbox)::-webkit-scrollbar-thumb{background:rgb(9 207 136/60%)}
+:is(.block-library-html__edit,iframe.components-sandbox):is(:hover,:focus) .block-editor-plain-text::-webkit-scrollbar-thumb{background:#000}
+.edit-post-layout__metaboxes:not(:empty) .edit-post-meta-boxes-area{padding:0 0 2.5rem!important}
+.block-editor-rich-text__editable:is(:hover,:active,:focus,:focus-within){z-index:5}
+.whynot-block-slider{height:min-content}div img{backdrop-filter:contrast(.8)}
+.block-editor-block-list__layout .block-editor-block-list__block:after{box-shadow:0 0 0 .5px rgb(0 0 0/40%)!important}
+.wp-block[data-align=full]{display:flex;flex-direction:column}
+.wp-block-columns.are-vertically-aligned-center{align-items:center;display:flex;justify-content:center}
+:is(.wp-admin) [data-title]:not([data-title=""]):before{--white-hwb:hwb(0deg 100% 0%);--black-hwb:hwb(0deg 0% 100%);--invert-hwb:invert(1);--limegreen-hwb:hwb(120deg 20% 20%);--royalblue-hwb:hwb(225deg 25% 12%);--orangered-hwb:hwb(33deg 0% 0%);content:attr(data-title);position:relative;display:flex;place-content:center;place-items:center;top:-1.5ch;left:-1ch;width:fit-content;height:fit-content;padding:3px;font:600 max(9px,.56rem) sans-serif;letter-spacing:.7px;background:var(--black-hwb);color:hwb(0deg 100% 0%);border:2.5px var(--white-hwb) solid;text-rendering:geometricprecision;-webkit-font-smoothing:subpixel-antialiased;-moz-osx-font-smoothing:subpixel-antialiased;white-space:nowrap;z-index:2;filter:drop-shadow(0 0 1px var(--black-hwb)) drop-shadow(2px 4px 10px var(--white-hwb));transition:all .6s ease-in-out;-webbkit-transition:all .6s ease-in-out;will-change:filter,text-shadow,background;speak:never}
+[data-title]:not([data-title=""]):hover:before{filter:invert(1);text-shadow:.5px .5px 3ch var(--white-hwb);transition:all .5s ease}
+.is-selected[data-title]:not([data-title=""]):before{background:var(--royalblue-hwb);filter:unset}
+.is-selected[data-title][data-type="core/spacer"]:before{position:absolute;background:var(--orangered-hwb)}
+:where(.is-selected,.rich-text.is-selected:focus){-webkit-box-shadow:0 0 0 1px hwb(0deg 0% 100%);box-shadow:0 0 0 1px hwb(0deg 0% 100%)}
+:where(.wp-admin) .block-editor-block-patterns-list__item {height:auto;}
+[data-type="core/columns"] {box-shadow: inset 0 0 20px 500vmax hwb(0deg 0% 100% / 2%);}
+:is([data-type="core/group"],[a="core/group"],[data-type="core/columns"],[data-type="core/column"],h1[data-title], h2[data-title], h3[data-title],[data-type='core/paragraph'],[data-type="core/html"]):not(:focus) {border: .2px dashed hwb(0deg 0% 100% / 56%)}
+:where(h1[data-title],h2[data-title],h3[data-title],h4[data-title],h5[data-title],h6[data-title],):after{content:"";position:absolute;width:14px;max-width:14px;max-height:14px;background-color:#fff;background-position:center;background-size:85%;background-repeat:no-repeat;aspect-ratio:1/1;border:1px dotted #1e90ff;display:inline-block;margin:-1.1%0;top:-.8rem;left:-1.5rem;z-index:2}
+h1[data-title]:after {
+  background-image: url("data:image/svg+xml,<svg width='100px' height='100px' xmlns='http://www.w3.org/2000/svg'><text x='12%' y='77%' font-size='4.8rem' font-family='sans-serif' text-align='center' vertical-align='center'>h1</text></svg>");
+}
+h2[data-title]:after {
+  background-image: url("data:image/svg+xml,<svg width='100px' height='100px' xmlns='http://www.w3.org/2000/svg'><text x='10%' y='77%' font-size='4.8rem' font-family='sans-serif' text-align='center' vertical-align='center'>h2</text></svg>");
+}
+h3[data-title]:after {
+  background-image: url("data:image/svg+xml,<svg width='100px' height='100px' xmlns='http://www.w3.org/2000/svg'><text x='10%' y='77%' font-size='4.8rem' font-family='sans-serif' text-align='center' vertical-align='center'>h3</text></svg>");
+}
+h4[data-title]:after {
+  background-image: url("data:image/svg+xml,<svg width='100px' height='100px' xmlns='http://www.w3.org/2000/svg'><text x='10%' y='77%' font-size='4.8rem' font-family='sans-serif' text-align='center' vertical-align='center'>h4</text></svg>");
+}
+h5[data-title]:after {
+  background-image: url("data:image/svg+xml,<svg width='100px' height='100px' xmlns='http://www.w3.org/2000/svg'><text x='12%' y='77%' font-size='4.8rem' font-family='sans-serif' text-align='center' vertical-align='center'>h5</text></svg>");
+}
+h6[data-title]:after {
+  background-image: url("data:image/svg+xml,<svg width='100px' height='100px' xmlns='http://www.w3.org/2000/svg'><text x='10%' y='77%' font-size='4.8rem' font-family='sans-serif' text-align='center' vertical-align='center'>h6</text></svg>");
+}
+[data-type="core/cover"]:before {transform: rotate(90deg) translatey(-2em);}
+
+:is(.wp-admin) :where(.block-editor-block-list__layout, .has-multi-selection .block-editor-block-list__layout)::selection {
+    background: lightskyblue;
+}
